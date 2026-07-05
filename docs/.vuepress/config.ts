@@ -199,17 +199,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       ],
     },
 
-    // 页脚信息
-    footer: {
-      createYear: 2019, // 博客创建年份
-      copyrightInfo:
-        'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a> | <a href="http://beian.miit.gov.cn/" target="_blank">桂ICP备2024034950号</a> | <img src="/img/beian.png" style="width: 15px; margin-bottom: -3px;" /> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=45142202000030" rel="noreferrer" target="_blank">桂公网安备45142202000030</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
-    },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
-        name: 'xugaoyi',
+        name: 'aquars',
         link: 'https://github.com/43aquarius'
       }
     },
@@ -344,6 +338,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
+    ['mathjax'],
+
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
@@ -351,6 +347,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
         },
       },
+    ],
+    [
+      'mathjax', {
+        mathjax: {
+       presets: ['input/tex', 'output/chtml']
+       },
+     },
     ],
   ],
 
