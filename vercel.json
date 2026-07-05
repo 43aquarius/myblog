@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "docs/.vuepress/dist",
   "headers": [
     {
       "source": "/assets/js/(.*)",
